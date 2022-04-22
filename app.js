@@ -5,9 +5,14 @@ const app = express()
 // Puerto en el que vamos a ejecutar el server
 const port = 3000
 
-// path inicia, respondera a la url localhost:3000
+// path inicial, respondera a la url localhost:3000
 app.get('/', (req, res) => {
 		res.send('Hello World!')
+})
+
+// path localhost:3000/launchx
+app.get('/launchx', (req, res) => {
+		res.send('Bienvenidos a launchx')
 })
 
 // inicializamos la el server
