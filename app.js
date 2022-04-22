@@ -23,6 +23,13 @@ app.get('/explorersInNode', (req, res) => {
 		res.send(explorer)
 })
 
+
+// returning query params
+// path localhost:3000/explorers/hpoggi
+app.get('/explorers/:explorerName', (req, res) => {
+		res.send(req.params)
+})
+
 // inicializamos la el server
 app.listen(port, () => {
 		console.log(`Example app listening on port ${port}`)
